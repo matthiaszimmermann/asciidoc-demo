@@ -1,0 +1,43 @@
+= Asciidoctor Readme
+
+== Tooling Support
+
+=== Browser Plugins 
+
+* https://asciidoctor.org/news/2013/09/18/introducing-asciidoctor-js-live-preview/[asciidoctor-js-live-preview]
+
+=== IDE Support
+
+https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[VS Code], 
+https://plugins.jetbrains.com/plugin/7391-asciidoc[IntelliJ], 
+https://marketplace.eclipse.org/content/asciidoctor-editor[Eclipse]
+
+
+== Creating Output Documents
+
+Asciidoctor documents may be also compiled into HTML/PDF via a building in a docker container. 
+
+=== Preparations
+
+Make sure to have a running docker environment by using the following command.
+
+[source,bash]
+----
+docker --version
+----
+
+=== Creating HTML/PDF Output using Docker
+
+To create HTML output
+
+[source,bash]
+----
+docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram BimaPima.adoc
+----
+
+To create PDF output
+
+[source,bash]
+----
+docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram -r asciidoctor-pdf -b pdf BimaPima.adoc
+----
