@@ -1,0 +1,41 @@
+= Sample Document
+
+:toc:
+
+== Level 1 Section
+
+Text
+
+=== Level 2 Section
+
+Some text with a bullet list
+
+* https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[asciidoc quick reference]
+* https://powerman.name/doc/asciidoc[asciidoc cheat-sheet]
+
+== Table
+
+[cols="1,2,2"]
+|===
+|ID|Header row column 2|Header row column 3
+
+|1
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+
+|2
+|Cell in column 2, row 3
+|Cell in column 3, row 2
+|===
+
+== Diagram
+
+[plantuml, img/data-overview, png]     
+....
+@startuml
+class "Parent Class" as parent
+class "Child Class" as child
+
+parent <|-- child
+@enduml
+....
