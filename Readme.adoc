@@ -32,12 +32,12 @@ To create HTML output
 
 [source,bash]
 ----
-docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram BimaPima.adoc
+docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram Sample.adoc
 ----
 
 To create PDF output
 
 [source,bash]
 ----
-docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram -r asciidoctor-pdf -b pdf BimaPima.adoc
+docker run -it --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor asciidoctor -D target -r asciidoctor-diagram -r asciidoctor-pdf -b pdf Sample.adoc
 ----
