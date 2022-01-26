@@ -1,11 +1,18 @@
 = Sample Document
 
-:toc:
+:author: Matthias Zimmermann
+:email: matthias@acme.com
+:date: 2022-01-25
+:revision: 0.1
+
+
+Author: {author} ({email}), Version: v{revision}, {date}
 
 == Level 1 Section
 
-Text
+Examples are provided for <<bullet-list, bullet lists>>, <<table, a simple table>> and a <<diagram, UML class diagram>>
 
+[[bullet-list]]
 === Level 2 Section
 
 Some text with a bullet list
@@ -13,6 +20,7 @@ Some text with a bullet list
 * https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[asciidoc quick reference]
 * https://powerman.name/doc/asciidoc[asciidoc cheat-sheet]
 
+[[table]]
 == Table
 
 [cols="1,2,2"]
@@ -28,6 +36,7 @@ Some text with a bullet list
 |Cell in column 3, row 2
 |===
 
+[[diagram]]
 == Diagram
 
 [plantuml, img/data-overview, png]     
